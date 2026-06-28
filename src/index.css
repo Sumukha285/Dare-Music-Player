@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;600;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom visual utilities for the MP3 Player Themes */
+
+/* 1. Synthwave Grid Scroll */
+.synthwave-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(236, 72, 153, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(236, 72, 153, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center bottom;
+  transform: perspective(300px) rotateX(60deg) scale(2.5);
+  transform-origin: center bottom;
+  animation: grid-scroll 16s linear infinite;
+  mask-image: linear-gradient(to top, rgba(0,0,0,1) 15%, rgba(0,0,0,0) 80%);
+}
+
+@keyframes grid-scroll {
+  from {
+    background-position: center 0px;
+  }
+  to {
+    background-position: center 320px;
+  }
+}
+
+/* 2. Cyberpunk Tech Decors */
+.cyberpunk-glitch-border {
+  position: relative;
+}
+.cyberpunk-glitch-border::before {
+  content: 'SYSTEM_ONLINE';
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  font-family: monospace;
+  font-size: 8px;
+  font-weight: bold;
+  background: #fde047;
+  color: #000;
+  padding: 0 4px;
+  letter-spacing: 1px;
+}
+
+/* Custom corner-cut brutalist panels */
+.clip-corner {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+/* 3. Vinyl Grooves spin animation */
+@keyframes spin-vinyl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-vinyl {
+  animation: spin-vinyl 12s linear infinite;
+}
+
+/* Glow styles */
+.neon-glow {
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.6), 0 0 20px rgba(236, 72, 153, 0.3);
+}
+
+.cyan-glow {
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.6), 0 0 20px rgba(34, 211, 238, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Dare Player",
+  "short_name": "Dare Player",
+  "description": "Premium multi-playlist music companion with live spatial echo & reverb acoustics, equalizer bands, and real-time AI captioning.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0715",
+  "theme_color": "#8A2BE2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

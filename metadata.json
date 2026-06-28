@@ -1,0 +1,8 @@
+{
+  "name": "Dare Player",
+  "description": "An advanced, fully-featured MP3 player with a customizable 7-band equalizer, real-time audio visualizers, custom style themes, and AI-powered synchronized captions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
